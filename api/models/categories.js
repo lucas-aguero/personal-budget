@@ -6,8 +6,8 @@ module.exports = (sequelize, type) => {
         autoIncrement: true,
       },
       name: type.STRING(50),
-      is_income: type.BOOLEAN,
-      user_id: type.INTEGER(1),
+      isIncome: type.BOOLEAN,
+      userId: type.INTEGER(1),
     });
   };
   

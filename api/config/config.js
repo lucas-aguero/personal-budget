@@ -13,4 +13,5 @@ module.exports = {
   PORT: process.env.PORT || 8080,
   TIPO_DE_PERSISTENCIA: process.env.TIPO || "MEM",
   STR_CNX: process.env.CNX || null,
+  
 };

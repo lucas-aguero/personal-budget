@@ -6,8 +6,10 @@ const apiRouterCategories = require("./api/categories");
 const apiRouterTransactions = require('./api/transactions');
 const apiRouterUsers = require('./api/users');
 
-router.use("/categories", middlewares.checkToken, apiRouterCategories);
-router.use('/transactions', middlewares.checkToken, apiRouterTransactions);
+router.use("/categories", apiRouterCategories);
+// router.use("/categories", middlewares.checkToken, apiRouterCategories);
+router.use('/transactions', apiRouterTransactions);
+// router.use('/transactions', middlewares.checkToken, apiRouterTransactions);
 router.use('/users', apiRouterUsers);
 
 module.exports = router;

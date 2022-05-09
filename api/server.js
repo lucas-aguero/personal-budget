@@ -5,7 +5,7 @@ const morgan = require("morgan");
 // const exphbs = require("express-handlebars");
 // const flash = require("connect-flash");
 const bodyParser = require('body-parser');
-// const cors = require('cors');
+const cors = require('cors');
 
 const apiRouter = require('./routes/api');
 // const viewsRouter = require('./routes/views');
@@ -36,7 +36,7 @@ app.set("port", process.env.PORT || 3333); //Toma el puerto del SO sino lo estab
 app.use(bodyParser.json()); // Se asegura que la info que recibimos es json
 app.use(bodyParser.urlencoded({ extended: true })); // Deja aceptar los datos que vienen de los formularios por URL
 app.use(morgan("dev")); // Muestra informacion de las peticiones en la consola del servidor
-// app.use(cors());
+app.use(cors());
 
 // Global Variables
 
